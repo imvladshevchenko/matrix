@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+@font-face {
+  src: url(../assets/fonts/copperplate-gothic-bold.ttf);
+  font-family: Copperplate;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+a {
+  line-height: normal;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@keyframes arrow-1 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  30% {
+    transform: translateY(-1em) rotate(-10deg);
+  }
+  60% {
+    transform: translateY(0) rotate(0);
+  }
+  90% {
+    transform: translateY(-1em) rotate(-10deg);
+  }
+}
+
+@keyframes arrow-2 {
+  0% {
+    transform: translateY(-1em) rotate(-5deg);
+  }
+  30% {
+    transform: translateY(0) rotate(0);
+  }
+  60% {
+    transform: translateY(1em) rotate(5deg);
+  }
+  80% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-1em) rotate(-5deg);
+  }
+}
+
+body {
+  font-size: 1vw;
+  background-color: #182137;
+  position: relative;
+  overflow-x: hidden;
+}
+main {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 28.3em;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  background: url(../img/poster.png) no-repeat #94a233;
+  background-size: cover;
+  height: 48.8em;
+}
+
+.video-bg > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+@supports (object-fit: cover) {
+  .video-bg > video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.blur-wrapper {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 48.8em;
+  width: 100%;
+  overflow: hidden;
+}
+.blur {
+  width: 83.5em;
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.woman-with-pills {
+  position: absolute;
+  z-index: 15;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.woman {
+  position: absolute;
+  width: 31.6em;
+  top: 12.6em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.blue-pill {
+  width: 3.6em;
+  position: absolute;
+  top: 37.6em;
+  left: -12.4em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.red-pill {
+  width: 3.8em;
+  position: absolute;
+  top: 37.6em;
+  right: -12.4em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.blue-pill:hover,
+.red-pill:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.3);
+}
+.left-arrow,
+.right-arrow {
+  width: 6.4em;
+}
+.left-arrow {
+  position: absolute;
+  top: 23em;
+  left: -17em;
+  animation: arrow-1 3s ease infinite;
+}
+.right-arrow {
+  position: absolute;
+  top: 22em;
+  right: -17em;
+  animation: arrow-2 3s ease infinite;
+}
+
+.header {
+  background-color: #120b2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.1em;
+  position: relative;
+  z-index: 10;
+}
+.header > a {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 11.6em;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.8em;
+  margin-bottom: 1em;
+}
+.first-title {
+  margin-bottom: 1.5em;
+  width: 20em;
+}
+.second-title {
+  width: 38.7em;
+}
+
+.choose {
+  display: flex;
+  justify-content: center;
+}
+
+.choose-text {
+  font-family: Copperplate, sans-serif;
+  font-weight: 700;
+  color: #fffc00;
+  font-size: 1.6em;
+}
+
+.footer {
+  position: relative;
+  z-index: 10;
+  padding: 2.9em 0 1.8em;
+  opacity: 0.7;
+  background-color: #120b2a;
+  display: flex;
+  justify-content: center;
+}
+.footer__terms {
+  font-family: "PT Sans", sans-serif;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1.4em;
+  width: 33.5em;
+}
+.footer__link {
+  color: #0067ff;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.popup-try {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  z-index: 50;
+  background-image: url(../img/blue-popup-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 29.5em;
+  height: 31.7em;
+  padding-top: 11.7em;
+  display: none;
+}
+.popup-try__close-btn {
+  position: absolute;
+  top: 4.7em;
+  right: 0.6em;
+  width: 1em;
+  cursor: pointer;
+}
+.popup-try__text {
+  font-family: Copperplate, sans-serif;
+  font-weight: 700;
+  color: #f6f6f6;
+  text-align: center;
+  width: 6.5em;
+  font-size: 2.2em;
+  margin-bottom: 1.2em;
+}
+.popup-try__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/blue-popup-btn.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: Copperplate, sans-serif;
+  font-weight: 700;
+  color: #f6f6f6;
+  text-align: center;
+  font-size: 1.6em;
+  width: 6.25em;
+  height: 2.73em;
+  text-decoration: none;
+  cursor: pointer;
+}
+.popup-try__button:hover {
+  background-image: url(../img/blue-popup-btn-hvr.png);
+  transition: background-image 0.3s ease;
+}
+
+.popup-get {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  z-index: 50;
+  background-image: url(../img/red-popup-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 29.5em;
+  height: 31.7em;
+  padding-top: 9.5em;
+  display: none;
+}
+.popup-get__text {
+  font-family: Copperplate, sans-serif;
+  font-weight: 700;
+  color: #f6f6f6;
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 2.3em;
+}
+.popup-get__terms {
+  font-family: "PT Sans", sans-serif;
+  color: #fff;
+  line-height: 1.13;
+  text-align: center;
+  font-size: 0.8em;
+  width: 28em;
+  margin-bottom: 2.5em;
+}
+.popup-get__link {
+  color: #ffde6a;
+  text-decoration: none;
+}
+.popup-get__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/red-popup-btn.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  font-family: Copperplate, sans-serif;
+  font-weight: 700;
+  color: #f6f6f6;
+  text-align: center;
+  font-size: 1.4em;
+  width: 9.75em;
+  height: 3.13em;
+  text-decoration: none;
+}
+.popup-get__button:hover {
+  background-image: url(../img/red-popup-btn-hvr.png);
+  transition: background-image 0.3s ease;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    margin-bottom: 73.5em;
+  }
+  .video-bg {
+    height: 119.9em;
+  }
+  .header {
+    height: 9.4em;
+  }
+  .logo {
+    width: 30em;
+  }
+  .footer {
+    padding: 3.5em 0 2.8em;
+  }
+  .footer__terms {
+    font-size: 3.2em;
+    width: 27.5em;
+  }
+  .title {
+    padding-top: 4.5em;
+    margin-bottom: 1.5em;
+  }
+  .first-title {
+    width: 39em;
+    margin-bottom: 2.2em;
+  }
+  .second-title {
+    width: 69.7em;
+  }
+  .choose-text {
+    font-size: 3.5em;
+  }
+  .woman {
+    width: 73.6em;
+    top: 32.6em;
+  }
+  .blue-pill {
+    width: 10.6em;
+    top: 89.6em;
+    left: -29.8em;
+  }
+  .red-pill {
+    width: 10.6em;
+    top: 89.6em;
+    right: -29.8em;
+  }
+  .blur-wrapper {
+    height: 119.8em;
+  }
+  .blur {
+    width: 200.5em;
+    top: 4em;
+  }
+  .left-arrow,
+  .right-arrow {
+    width: 13.4em;
+  }
+  .left-arrow {
+    top: 57em;
+    left: -35em;
+    animation: arrow-1 2s ease infinite;
+  }
+  .right-arrow {
+    top: 56em;
+    right: -35em;
+    animation: arrow-2 2.3s ease infinite;
+  }
+  .popup-try,
+  .popup-get {
+    width: 70.5em;
+    height: 76.7em;
+    padding-top: 27.7em;
+  }
+  .popup-try__text {
+    font-size: 5.2em;
+    line-height: 1.18;
+  }
+  .popup-try__button {
+    font-size: 3.6em;
+    width: 7.45em;
+    height: 3.33em;
+  }
+  .popup-try__close-btn {
+    top: 11em;
+    right: 0.6em;
+    width: 3em;
+  }
+  .popup-get {
+    padding-top: 22em;
+  }
+  .popup-get__text {
+    font-size: 3.4em;
+    margin-bottom: 1.8em;
+  }
+  .popup-get__terms {
+    font-size: 2.8em;
+    width: 20.3em;
+    margin-bottom: 0.5em;
+  }
+  .popup-get__button {
+    font-size: 2.9em;
+  }
+}
