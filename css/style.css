@@ -132,6 +132,9 @@ main {
   left: 50%;
   transform: translateX(-50%);
 }
+.blur-mob {
+  display: none;
+}
 
 .woman-with-pills {
   position: absolute;
@@ -145,6 +148,13 @@ main {
   top: 12.6em;
   left: 50%;
   transform: translateX(-50%);
+}
+.woman__logo {
+  position: absolute;
+  width: 2em;
+  top: 29.9em;
+  left: 50%;
+  transform: translateX(-37.2%);
 }
 .blue-pill {
   width: 3.6em;
@@ -214,6 +224,9 @@ main {
 }
 .second-title {
   width: 38.7em;
+}
+.mob-title {
+  display: none;
 }
 
 .choose {
@@ -368,12 +381,119 @@ main {
   transition: background-image 0.3s ease;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1200px) {
   main {
-    margin-bottom: 73.5em;
+    margin-bottom: 42.3em;
   }
   .video-bg {
-    height: 119.9em;
+    height: 71.8em;
+  }
+  .header {
+    height: 4.1em;
+  }
+  .logo {
+    width: 14.6em;
+  }
+  .blur-wrapper {
+    height: 71.8em;
+  }
+  .blur {
+    width: 122.5em;
+  }
+  .title {
+    padding-top: 3.8em;
+    margin-bottom: 2em;
+  }
+  .first-title {
+    margin-bottom: 1.8em;
+    width: 27.3em;
+  }
+  .second-title {
+    width: 52.9em;
+  }
+  .choose-text {
+    font-size: 2.3em;
+  }
+  .woman {
+    width: 46.6em;
+    top: 19.6em;
+  }
+  .blue-pill {
+    width: 6.6em;
+    top: 56em;
+    left: -19em;
+  }
+  .red-pill {
+    width: 6.6em;
+    top: 56em;
+    right: -19em;
+  }
+  .left-arrow,
+  .right-arrow {
+    width: 7.4em;
+  }
+  .left-arrow {
+    top: 36em;
+    left: -21em;
+  }
+  .right-arrow {
+    top: 35em;
+    right: -21em;
+  }
+  .woman__logo {
+    width: 3em;
+    top: 45.1em;
+  }
+
+  .footer {
+    padding: 4.5em 0 2.5em;
+  }
+  .footer__terms {
+    font-size: 1.7em;
+  }
+
+  .popup-try,
+  .popup-get {
+    width: 43.2em;
+    height: 45.9em;
+    padding-top: 16.3em;
+  }
+  .popup-try__text {
+    font-size: 2.9em;
+    line-height: 1.44;
+  }
+  .popup-try__button {
+    font-size: 2em;
+    width: 7.25em;
+    height: 3.23em;
+  }
+  .popup-try__close-btn {
+    top: 6.9em;
+    right: 1.3em;
+    width: 1.5em;
+  }
+
+  .popup-get {
+    padding-top: 13.7em;
+  }
+  .popup-get__text {
+    font-size: 2.1em;
+  }
+  .popup-get__terms {
+    font-size: 1.1em;
+    width: 29.1em;
+  }
+  .popup-get__button {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    margin-bottom: 81.5em;
+  }
+  .video-bg {
+    height: 186.9em;
   }
   .header {
     height: 9.4em;
@@ -382,63 +502,80 @@ main {
     width: 30em;
   }
   .footer {
-    padding: 3.5em 0 2.8em;
+    padding: 8em 0 5.8em;
   }
   .footer__terms {
     font-size: 3.2em;
-    width: 27.5em;
+    width: 21.5em;
   }
   .title {
-    padding-top: 4.5em;
-    margin-bottom: 1.5em;
+    padding-top: 7.5em;
+    margin-bottom: 4.5em;
   }
   .first-title {
-    width: 39em;
-    margin-bottom: 2.2em;
+    width: 58em;
+    margin-bottom: 4em;
   }
   .second-title {
-    width: 69.7em;
+    display: none;
+  }
+  .mob-title {
+    display: block;
+    width: 66em;
   }
   .choose-text {
-    font-size: 3.5em;
+    font-size: 5.2em;
   }
   .woman {
     width: 73.6em;
-    top: 32.6em;
+    top: 60.6em;
+  }
+  .woman__logo {
+    width: 5em;
+    top: 100.9em;
+    transform: translateX(-39%);
   }
   .blue-pill {
     width: 10.6em;
-    top: 89.6em;
+    top: 117.6em;
     left: -29.8em;
   }
   .red-pill {
     width: 10.6em;
-    top: 89.6em;
+    top: 117.6em;
     right: -29.8em;
   }
   .blur-wrapper {
     height: 119.8em;
   }
   .blur {
-    width: 200.5em;
-    top: 4em;
+    display: none;
+  }
+  .blur-mob {
+    display: block;
+    width: 139.5em;
+    top: 6.4em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .left-arrow,
   .right-arrow {
     width: 13.4em;
   }
   .left-arrow {
-    top: 57em;
+    top: 85em;
     left: -35em;
     animation: arrow-1 2s ease infinite;
   }
   .right-arrow {
-    top: 56em;
+    top: 84em;
     right: -35em;
     animation: arrow-2 2.3s ease infinite;
   }
   .popup-try,
   .popup-get {
+    top: 45%;
     width: 70.5em;
     height: 76.7em;
     padding-top: 27.7em;
